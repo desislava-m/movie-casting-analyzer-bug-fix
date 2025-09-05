@@ -1,4 +1,4 @@
-import { act, useContext, useEffect } from "react"
+import { useContext, useEffect } from "react"
 import { DataContext } from "../context/DataContext"
 import Navbar from "../components/Navbar"
 import { useReturnToUploaderPage } from "../hooks/useReturnToUploader"
