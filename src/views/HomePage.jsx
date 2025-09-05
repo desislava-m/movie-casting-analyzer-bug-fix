@@ -97,7 +97,7 @@ export default function HomePage() {
         }
     }, [actors, movies, roles]);
 
-    if (!actors.length === 0 || movies.length === 0 || roles.length === 0) {
+    if (actors.length === 0 || movies.length === 0 || roles.length === 0) {
         return <p>Loading data...</p>
     }
 
