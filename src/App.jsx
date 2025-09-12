@@ -1,5 +1,5 @@
 import './App.css';
-import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DataProvider from './context/DataContext';
 import FileUploader from './components/FileUploader';
 import HomePage from './views/Homepage';
