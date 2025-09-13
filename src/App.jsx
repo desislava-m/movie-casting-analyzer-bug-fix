@@ -2,7 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import DataProvider from './context/DataContext';
 import FileUploader from './components/FileUploader';
-import HomePage from './views/Homepage';
+import HomePage from './views/HomePage';
 import MoviesPage from './views/MoviesPage';
 import ActorsPage from './views/ActorsPage';
 import Movie from './components/Movie';
