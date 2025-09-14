@@ -36,7 +36,7 @@ export function useMostFrequentActors() {
                     const actor1Id = actorsArray[i];
                     const actor2Id = actorsArray[j];
 
-                    const pairKey = [actor1Id, actor2Id].sort((a, b) => a - b).join('-');
+                    const pairKey = [actor1Id, actor2Id].join('-');
 
                     if (!pairCount[pairKey]) {
                         pairCount[pairKey] = [];
