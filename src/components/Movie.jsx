@@ -9,25 +9,30 @@ function parseDate(dateStr) {
 
   
   if (/^\d{4}-\d{2}-\d{2}$/.test(dateStr)) {
-    return new Date(dateStr);
+    const dateArr = dateStr.split('-');
+    const [ year, month, day ] = dateArr.map(str => Number(str))
+    return new Date(year, month - 1, day);
   }
 
  
   if (/^\d{2}\/\d{2}\/\d{4}$/.test(dateStr)) {
-    const [month, day, year] = dateStr.split('/');
-    return new Date(`${year}-${month}-${day}`);
+    const dateArr = dateStr.split('/');
+    const [ day, month, year ] = dateArr.map(str => Number(str))
+    return new Date(year, month - 1, day);
   }
 
 
   if (/^\d{2}-\d{2}-\d{4}$/.test(dateStr)) {
-    const [month, day, year] = dateStr.split('-');
-    return new Date(`${year}-${month}-${day}`);
+    const dateArr = dateStr.split('-');
+    const [ day, month, year ] = dateArr.map(str => Number(str))
+    return new Date(year, month - 1, day);
   }
 
 
   if (/^\d{2}\.\d{2}\.\d{4}$/.test(dateStr)) {
-    const [day, month, year] = dateStr.split('.');
-    return new Date(`${year}-${month}-${day}`);
+    const dateArr = dateStr.split('.');
+    const [ day, month, year ] = dateArr.map(str => Number(str))
+    return new Date(year, month - 1, day);
   }
 
   if (/^[A-Za-z]+\s\d{1,2},\s\d{4}$/.test(dateStr)) {
